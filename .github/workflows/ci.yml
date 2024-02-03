@@ -16,7 +16,8 @@ jobs:
           node-version: 20.11.0
       - name: Rush update
         run: node common/scripts/install-run-rush.js update
-      - name: Rush rebuild
-        run: node common/scripts/install-run-rush.js rebuild --verbose --production
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js change --verify
+      - name: Rush rebuild
+        run: node common/scripts/install-run-rush.js rebuild --verbose
+      
