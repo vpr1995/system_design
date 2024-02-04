@@ -1,0 +1,17 @@
+{
+  "name": "url_shortner",
+  "entries": [
+    {
+      "version": "1.0.0",
+      "tag": "url_shortner_v1.0.0",
+      "date": "Sun, 04 Feb 2024 05:15:52 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "testing for second time"
+          }
+        ]
+      }
+    }
+  ]
+}

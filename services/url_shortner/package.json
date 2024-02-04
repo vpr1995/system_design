@@ -1,6 +1,6 @@
 {
   "name": "url_shortner",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "bin": {
     "url_shortner": "bin/url_shortner.js"
   },
