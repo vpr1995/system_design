@@ -437,7 +437,8 @@
     // }
     {
       "packageName": "url_shortner",
-      "projectFolder": "services/url_shortner"
+      "projectFolder": "services/url_shortner",
+      "shouldPublish": true
     }
   ]
 }
