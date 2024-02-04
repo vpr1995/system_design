@@ -435,5 +435,9 @@
     //   "reviewCategory": "tools",
     //   "tags": [ "tools" ]
     // }
+    {
+      "packageName": "url_shortner",
+      "projectFolder": "services/url_shortner"
+    }
   ]
 }
