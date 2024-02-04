@@ -5,7 +5,7 @@ import * as UrlShortner from '../lib/url_shortner-stack';
 test('SQS Queue and SNS Topic Created', () => {
   const app = new cdk.App();
   // WHEN
-  const stack = new UrlShortner.UrlShortnerStack(app, 'MyTestStack');
+  const stack = new UrlShortner.UrlShortnerStack(app, 'MyTestStac k');
   // THEN
 
   const template = Template.fromStack(stack);
