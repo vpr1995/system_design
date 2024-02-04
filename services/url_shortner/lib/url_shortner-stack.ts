@@ -8,7 +8,7 @@ export class UrlShortnerStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const queue = new sqs.Queue(this, 'UrlShortnerQueue', {
+    const queue = new sqs.Queue(this, 'Ur lShortnerQueue', {
       visibilityTimeout: Duration.seconds(300)
     });
 
