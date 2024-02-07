@@ -438,6 +438,10 @@
     {
       "packageName": "url_shortner",
       "projectFolder": "services/url_shortner"
+    },
+    {
+      "packageName": "cdk-pipeline",
+      "projectFolder": "pipeline"
     }
   ]
 }
