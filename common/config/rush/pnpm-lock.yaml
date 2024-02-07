@@ -7,6 +7,7 @@ importers:
 
   ../../services/url_shortner:
     specifiers:
+      '@aws-cdk/aws-lambda-go-alpha': ~2.126.0-alpha.0
       '@types/jest': ^29.5.11
       '@types/node': 20.11.14
       aws-cdk: 2.126.0
@@ -17,6 +18,7 @@ importers:
       ts-node: ^10.9.2
       typescript: ~5.3.3
     dependencies:
+      '@aws-cdk/aws-lambda-go-alpha': 2.126.0-alpha.0_56t54yfz6vduhozcx6efopccg4
       aws-cdk-lib: 2.126.0_constructs@10.3.0
       constructs: 10.3.0
     devDependencies:
@@ -48,6 +50,17 @@ packages:
 
   /@aws-cdk/asset-node-proxy-agent-v6/2.0.1:
     resolution: {integrity: sha512-DDt4SLdLOwWCjGtltH4VCST7hpOI5DzieuhGZsBpZ+AgJdSI2GCjklCXm0GCTwJG/SolkL5dtQXyUKgg9luBDg==}
+    dev: false
+
+  /@aws-cdk/aws-lambda-go-alpha/2.126.0-alpha.0_56t54yfz6vduhozcx6efopccg4:
+    resolution: {integrity: sha512-emM6d2K7FIOZOwbzRnwwzIuGREdfBtQAUQN7K0Botxn9cVXZXEpbd70BruXDpNSZcgi3JUlX399pSzF0ChY13g==}
+    engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      aws-cdk-lib: ^2.126.0
+      constructs: ^10.0.0
+    dependencies:
+      aws-cdk-lib: 2.126.0_constructs@10.3.0
+      constructs: 10.3.0
     dev: false
 
   /@babel/code-frame/7.23.5:

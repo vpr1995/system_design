@@ -1,19 +1,23 @@
-import { Duration, Stack, StackProps } from 'aws-cdk-lib';
-import * as sns from 'aws-cdk-lib/aws-sns';
-import * as subs from 'aws-cdk-lib/aws-sns-subscriptions';
-import * as sqs from 'aws-cdk-lib/aws-sqs';
+import { Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
+import { LambdaIntegration, RestApi } from 'aws-cdk-lib/aws-apigateway';
+import { GoFunction } from '@aws-cdk/aws-lambda-go-alpha';
+import { Architecture, Runtime } from 'aws-cdk-lib/aws-lambda';
 
 export class UrlShortnerStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const queue = new sqs.Queue(this, 'UrlShortnerQueue', {
-      visibilityTimeout: Duration.seconds(300)
+    //setup api gateway
+    const apigateway = new RestApi(this, 'urlShortnerApi', {
+      restApiName: 'Url Shortner Service',
     });
 
-    const topic = new sns.Topic(this, 'UrlShortnerTopic');
+    const lambda = new GoFunction(this, 'urlShortnerFunction', {
+      entry: './src',
+      architecture: Architecture.ARM_64,
+    });
 
-    topic.addSubscription(new subs.SqsSubscription(queue));
+    apigateway.root.addResource('ping').addMethod('GET', new LambdaIntegration(lambda));
   }
 }
